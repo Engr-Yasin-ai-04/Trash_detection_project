@@ -12,13 +12,13 @@
 <h2>📋 Table of Contents</h2>
 <ul>
   <li><a href="#features">Features</a></li>
-  <li><a href="#waste-classes">Waste Classes</a></li>
-  <li><a href="#tech-stack">Tech Stack</a></li>
-  <li><a href="#installation">Installation</a></li>
+  <li><a href="#classes">Waste Classes</a></li>
+  <li><a href="#tech">Tech Stack</a></li>
+  <li><a href="#setup">Installation</a></li>
   <li><a href="#usage">Usage</a></li>
-  <li><a href="#api-endpoints">API Endpoints</a></li>
-  <li><a href="#project-structure">Project Structure</a></li>
-  <li><a href="#model-details">Model Details</a></li>
+  <li><a href="#api">API Endpoints</a></li>
+  <li><a href="#structure">Project Structure</a></li>
+  <li><a href="#model">Model Details</a></li>
   <li><a href="#license">License</a></li>
 </ul>
 
@@ -26,114 +26,70 @@
 
 <h2 id="features">✨ Features</h2>
 <ul>
-  <li><strong>🤖 AI-Powered Detection</strong> - YOLOv8 model for accurate waste identification</li>
-  <li><strong>🎨 Image Annotation</strong> - Automatic bounding box drawing with labels</li>
-  <li><strong>📊 Analytics Dashboard</strong> - Real-time statistics and tracking</li>
-  <li><strong>📱 Responsive Design</strong> - Works on all devices</li>
-  <li><strong>🌙 Dark Mode</strong> - Automatic dark mode support</li>
+  <li><strong>🤖 AI Detection</strong> - YOLOv8 for waste identification</li>
+  <li><strong>🎨 Annotation</strong> - Bounding boxes with labels</li>
+  <li><strong>📊 Dashboard</strong> - Real-time statistics</li>
+  <li><strong>📱 Responsive</strong> - Works on all devices</li>
 </ul>
 
 <hr>
 
-<h2 id="waste-classes">🗑️ Waste Classes</h2>
+<h2 id="classes">🗑️ Waste Classes</h2>
 <ul>
-  <li><strong>BIODEGRADABLE</strong> 🌱 - Organic waste, food scraps</li>
-  <li><strong>CARDBOARD</strong> 📦 - Cardboard boxes, packaging</li>
+  <li><strong>BIODEGRADABLE</strong> 🌱 - Organic waste</li>
+  <li><strong>CARDBOARD</strong> 📦 - Boxes, packaging</li>
   <li><strong>GLASS</strong> 🍾 - Bottles, jars</li>
-  <li><strong>METAL</strong> ⚙️ - Cans, metal containers</li>
+  <li><strong>METAL</strong> ⚙️ - Cans, containers</li>
   <li><strong>PAPER</strong> 📰 - Newspapers, office paper</li>
-  <li><strong>PLASTIC</strong> 🧴 - Plastic bottles, bags</li>
+  <li><strong>PLASTIC</strong> 🧴 - Bottles, bags</li>
 </ul>
 
 <hr>
 
-<h2 id="tech-stack">🛠️ Tech Stack</h2>
-<h3>Backend</h3>
+<h2 id="tech">🛠️ Tech Stack</h2>
 <ul>
-  <li>Python 3.9+</li>
-  <li>Django 4.2</li>
-  <li>Django REST Framework</li>
-  <li>SQLite / PostgreSQL</li>
-</ul>
-
-<h3>Machine Learning</h3>
-<ul>
-  <li>YOLOv8 (Ultralytics)</li>
-  <li>PyTorch 2.1</li>
-  <li>OpenCV</li>
-  <li>NumPy</li>
-</ul>
-
-<h3>Frontend</h3>
-<ul>
-  <li>HTML5</li>
-  <li>CSS3</li>
-  <li>JavaScript</li>
-  <li>Font Awesome Icons</li>
+  <li><strong>Backend:</strong> Python, Django, Django REST</li>
+  <li><strong>ML:</strong> YOLOv8, PyTorch, OpenCV</li>
+  <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+  <li><strong>Database:</strong> SQLite</li>
 </ul>
 
 <hr>
 
-<h2 id="installation">📦 Installation</h2>
+<h2 id="setup">📦 Installation</h2>
 
-<h3>Prerequisites</h3>
-<ul>
-  <li>Python 3.9+</li>
-  <li>pip</li>
-  <li>Git</li>
-</ul>
+<pre><code>git clone https://github.com/Engr-Yasin-ai-04/Trash_detection_project.git
+cd Trash_detection_project
 
-<h3>Step-by-Step</h3>
-
-<pre><code># 1. Clone repository
-git clone https://github.com/YOUR_USERNAME/trash-detection-ai.git
-cd trash-detection-ai
-
-# 2. Create virtual environment (Windows)
 python -m venv venv
 venv\Scripts\activate
 
-# 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Create .env file
-echo SECRET_KEY=your-secret-key > .env
-echo DEBUG=True >> .env
-
-# 5. Run migrations
 python manage.py makemigrations accounts
 python manage.py makemigrations detection
 python manage.py migrate
 
-# 6. Create superuser
-python manage.py createsuperuser
-
-# 7. Run server
 python manage.py runserver
 </code></pre>
 
-<p>Access the app at: <strong>http://localhost:8000</strong></p>
+<p>Access: <strong>http://localhost:8000</strong></p>
 
 <hr>
 
 <h2 id="usage">🎯 Usage</h2>
 <ol>
-  <li><strong>Upload Image</strong> - Click or drag & drop (JPG, PNG, max 5MB)</li>
-  <li><strong>Choose Analysis</strong>
-    <ul>
-      <li><em>Analyze Image</em> - Get text results with confidence scores</li>
-      <li><em>Analyze with Annotation</em> - Get image with bounding boxes</li>
-    </ul>
-  </li>
-  <li><strong>View Results</strong> - See detected items with confidence percentages</li>
-  <li><strong>Track Statistics</strong> - Monitor detection history and performance</li>
+  <li>Upload image (JPG, PNG, max 5MB)</li>
+  <li>Click "Analyze Image" for results</li>
+  <li>Click "Analyze with Annotation" for bounding boxes</li>
+  <li>View detection history in dashboard</li>
 </ol>
 
 <hr>
 
-<h2 id="api-endpoints">🔌 API Endpoints</h2>
+<h2 id="api">🔌 API Endpoints</h2>
 
-<table border="1" cellpadding="10" cellspacing="0">
+<table border="1" cellpadding="8">
   <tr>
     <th>Method</th>
     <th>Endpoint</th>
@@ -142,22 +98,17 @@ python manage.py runserver
   <tr>
     <td>GET</td>
     <td>/api/detection/detections/</td>
-    <td>List all detections</td>
+    <td>All detections</td>
   </tr>
   <tr>
     <td>GET</td>
-    <td>/api/detection/detections/recent/?limit=5</td>
-    <td>Get recent detections</td>
+    <td>/api/detection/detections/recent/</td>
+    <td>Recent 5 detections</td>
   </tr>
   <tr>
     <td>GET</td>
     <td>/api/detection/detections/stats/</td>
-    <td>Get system statistics</td>
-  </tr>
-  <tr>
-    <td>GET</td>
-    <td>/api/detection/detections/status/</td>
-    <td>Check model status</td>
+    <td>System statistics</td>
   </tr>
   <tr>
     <td>POST</td>
@@ -167,103 +118,51 @@ python manage.py runserver
   <tr>
     <td>POST</td>
     <td>/api/detection/detections/detect_with_annotation/</td>
-    <td>Analyze with annotation</td>
+    <td>Analyze with boxes</td>
   </tr>
 </table>
 
-<h3>Example API Call</h3>
-<pre><code>import requests
-
-url = "http://localhost:8000/api/detection/detections/detect/"
-files = {'image': open('test.jpg', 'rb')}
-response = requests.post(url, files=files)
-print(response.json())</code></pre>
-
 <hr>
 
-<h2 id="project-structure">📁 Project Structure</h2>
+<h2 id="structure">📁 Project Structure</h2>
 
-<pre><code>trash-detection-ai/
+<pre><code>Trash_detection_project/
 ├── manage.py
 ├── requirements.txt
-├── .env
-├── .gitignore
-├── README.md
 ├── core/
 │   ├── settings.py
-│   ├── urls.py
 │   └── apps/
 │       ├── accounts/
-│       │   ├── models.py
-│       │   ├── views.py
-│       │   └── urls.py
 │       └── detection/
-│           ├── models.py
-│           ├── views.py
-│           ├── services.py
-│           └── urls.py
 ├── ml_models/
 │   └── final_model_25epochs.pt
-├── media/
-│   └── detections/
 ├── templates/
 │   └── index.html
-└── static/</code></pre>
+└── media/</code></pre>
 
 <hr>
 
-<h2 id="model-details">🧠 Model Details</h2>
-
+<h2 id="model">🧠 Model Details</h2>
 <ul>
-  <li><strong>Architecture:</strong> YOLOv8</li>
-  <li><strong>Framework:</strong> Ultralytics</li>
-  <li><strong>Training Epochs:</strong> 25</li>
-  <li><strong>Input Size:</strong> 640x640</li>
-  <li><strong>Classes:</strong> 6 waste types</li>
-  <li><strong>File Size:</strong> 49.62 MB</li>
-  <li><strong>Location:</strong> <code>ml_models/final_model_25epochs.pt</code></li>
-</ul>
-
-<h3>Performance</h3>
-<ul>
-  <li>mAP@0.5: ~95%</li>
-  <li>Precision: ~93%</li>
-  <li>Recall: ~91%</li>
-  <li>Inference Time: ~30ms per image</li>
+  <li><strong>Model:</strong> YOLOv8</li>
+  <li><strong>Epochs:</strong> 25</li>
+  <li><strong>Classes:</strong> 6</li>
+  <li><strong>Size:</strong> 49.62 MB</li>
+  <li><strong>Path:</strong> <code>ml_models/final_model_25epochs.pt</code></li>
 </ul>
 
 <hr>
 
 <h2 id="license">📄 License</h2>
-<p>This project is licensed under the <strong>MIT License</strong>.</p>
-
-<pre><code>MIT License
-
-Copyright (c) 2024 Yaseen
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files...</code></pre>
+<p>MIT License © 2024</p>
 
 <hr>
 
 <h2>👨‍💻 Author</h2>
-<p><strong>Yaseen</strong></p>
-<ul>
-  <li>GitHub: <a href="https://github.com/yourusername">
-Engr-Yasin-ai-04</a></li>
-  <li>Email: engr.yasin.ai@gmail.com</li>
-</ul>
+<p><strong>Yaseen</strong><br>
+GitHub: <a href="https://github.com/Engr-Yasin-ai-04">@Engr-Yasin-ai-04</a><br>
+Email: engr.yasin.ai@gmail.com</p>
 
 <hr>
 
-<h2>🙏 Acknowledgments</h2>
-<ul>
-  <li>Roboflow for the dataset</li>
-  <li>Ultralytics for YOLOv8</li>
-  <li>Django Community</li>
-  <li>PyTorch Team</li>
-</ul>
-
-<hr>
-
-<p align="center">Made with ❤️ for a cleaner planet</p>
+<p align="center">Made with ❤️</p>
