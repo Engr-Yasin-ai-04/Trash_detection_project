@@ -1,0 +1,57 @@
+trash_detection_project/
+├── backend/                          # Django backend (ALL IN ONE)
+│   ├── manage.py
+│   ├── requirements.txt              # All dependencies
+│   ├── .env                          # Environment variables
+│   ├── Dockerfile                    # Container config
+│   ├── docker-compose.yml            # Multi-container setup
+│   ├── config/
+│   │   ├── __init__.py
+│   │   ├── settings.py               # ALL settings combined
+│   │   ├── urls.py                    # Main URL routing
+│   │   ├── wsgi.py                    # WSGI for production
+│   │   └── asgi.py                    # ASGI for WebSockets
+│   ├── apps/
+│   │   ├── __init__.py
+│   │   ├── accounts/                  # User authentication
+│   │   │   ├── __init__.py
+│   │   │   ├── models.py               # User profiles
+│   │   │   ├── views.py                 # Login/register
+│   │   │   └── urls.py
+│   │   └── detection/                  # MAIN DETECTION APP
+│   │       ├── __init__.py
+│   │       ├── models.py                # Detection models
+│   │       ├── views.py                  # ALL views in one file
+│   │       ├── urls.py                    # App URLs
+│   │       ├── serializers.py             # API serializers
+│   │       ├── services.py                 # ALL services (detector, video, alerts)
+│   │       ├── tasks.py                    # Celery async tasks
+│   │       └── utils.py                    # Helper functions
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── middleware.py                # ALL middleware combined
+│   │   └── cache.py                      # Redis cache config
+│   ├── ml_models/                         # TRAINED MODEL GOES HERE
+│   │   ├── best.pt                         # YOLO model (from training)
+│   │   ├── classes.txt                      # Class names
+│   │   └── model.onnx                       # ONNX version for deployment
+│   ├── static/                            # CSS, JS, images
+│   ├── media/                              # Uploaded images
+│   ├── templates/                          # HTML templates
+│   └── scripts/                            # Utility scripts
+│       ├── train_model.sh
+│       ├── download_dataset.py              # Script to download dataset
+│       └── setup.sh
+├── data/                                 # Dataset folder
+│   ├── raw/                               # Original downloaded dataset
+│   │   └── garbage-classification-3/       # The 10k+ images
+│   ├── processed/                          # Preprocessed for training
+│   └── README.md
+├── notebooks/                            # Jupyter notebooks
+│   └── train_yolo.ipynb                    # Training notebook
+├── frontend/                             # Optional React frontend
+│   ├── package.json
+│   └── src/
+│       ├── App.js
+│       └── components/
+└── README.md
