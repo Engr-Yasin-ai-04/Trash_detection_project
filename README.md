@@ -16,6 +16,7 @@
   <li><a href="#tech">Tech Stack</a></li>
   <li><a href="#setup">Installation</a></li>
   <li><a href="#usage">Usage</a></li>
+  <li><a href="#screenshots">Screenshots</a></li>
   <li><a href="#api">API Endpoints</a></li>
   <li><a href="#structure">Project Structure</a></li>
   <li><a href="#model">Model Details</a></li>
@@ -87,6 +88,26 @@ python manage.py runserver
 
 <hr>
 
+<h2 id="screenshots">📸 Screenshots</h2>
+
+<h3>🔍 Image Analysis Interface</h3>
+<p>Upload and analyze waste images with real-time detection:</p>
+<p align="center">
+  <img src="output01.JPG" alt="EcoVision AI - Image Analysis Interface" width="800">
+  <br>
+  <em>Figure 1: Main interface showing image upload and analysis options</em>
+</p>
+
+<h3>🎯 Detection Results with Annotations</h3>
+<p>AI-powered waste classification with bounding boxes and confidence scores:</p>
+<p align="center">
+  <img src="output02.JPG" alt="EcoVision AI - Detection Results with Annotations" width="800">
+  <br>
+  <em>Figure 2: Detected objects with bounding boxes, labels, and confidence percentages</em>
+</p>
+
+<hr>
+
 <h2 id="api">🔌 API Endpoints</h2>
 
 <table border="1" cellpadding="8">
@@ -129,6 +150,8 @@ python manage.py runserver
 <pre><code>Trash_detection_project/
 ├── manage.py
 ├── requirements.txt
+├── output01.JPG          # Screenshot - Main interface
+├── output02.JPG          # Screenshot - Detection results
 ├── core/
 │   ├── settings.py
 │   └── apps/
